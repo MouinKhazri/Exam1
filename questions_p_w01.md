@@ -60,3 +60,6 @@ namespace CodeProblems
 </pre>
 
 **Your answers:**
+Description: the code creates a person object and prints out parts of the name in uppercase, then it logs a couple of messages to a file, and finally tries to remove even numbers from a list.
+
+Issues: the PersonName class doesn’t return the last name when looping through it, which is a mistake. The FileLogger class has an empty Dispose method, so the file stream won’t actually be closed which could lead to data not being saved properly. The code also tries to change a list while looping through it with foreach, which causes an error. A better way would be to use something like RemoveAll. Lastly, the list is missing its type which would normally be List<int> instead of just List.
